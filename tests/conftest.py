@@ -53,8 +53,8 @@ def driver(request): # Inicialização dos testes - similar a um Before / Setup
                 'name': test_name
             }
         }
-        _url = 'https://oauth-riciijessica-0dece:3873b1e1-969e-41a2-bb8f-2366260660a0@ondemand.us-west-1.saucelabs.com:443/wd/hub'
-
+        _url = 'https://' + SAUCE_USERNAME + ':' + SAUCE_ACCESS_KEY
+        
         driver_ = webdriver.Remote(_url, capabilities)
     else:  # execução local / localhost
         if config.browser == 'chrome':
